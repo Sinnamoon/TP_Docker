@@ -21,3 +21,7 @@ jobs:
     - name: Lint with Pylint
       run: |
         python -m pylint --exit-zero dockertest.py
+    - name: Build Docker container
+      run: |
+        docker build -t my-image:latest .
+        docker run my-image:latest python -m unittest dockertest.py
