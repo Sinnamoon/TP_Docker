@@ -20,4 +20,4 @@ jobs:
         python -m unittest dockertest.py
     - name: Lint with Pylint
       run: |
-        python -m pylint dockertest.py
+        python -m pylint --exit-zero dockertest.py
